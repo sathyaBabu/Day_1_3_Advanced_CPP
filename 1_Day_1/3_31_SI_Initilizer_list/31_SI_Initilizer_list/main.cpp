@@ -5,7 +5,34 @@
 //  Created by Sathya Babu on 31/07/23.
 //  https://en.cppreference.com/w/cpp/utility/initializer_list
 
+// under git branch production
+
 // touched on 4th Aug 12:50
+
+/*
+ 
+ 
+ git branch
+ Sathyas-MBP-2:1_A_AdvancedCPP_Index malsneha$ git branch production
+ Sathyas-MBP-2:1_A_AdvancedCPP_Index malsneha$ git branch
+ * (HEAD detached from b5f1f53)
+   main
+   production
+
+ git checkout production
+
+ M    1_Day_1/1_31_SI_BasicsCostConstexpr/31_SI_BasicsCostConstexpr.xcodeproj/project.xcworkspace/xcuserdata/malsneha.xcuserdatad/UserInterfaceState.xcuserstate
+ M    1_Day_1/2_31_SI_aggregatredConsructor/31_SI_aggregatredConsructor.xcodeproj/project.xcworkspace/xcuserdata/malsneha.xcuserdatad/UserInterfaceState.xcuserstate
+ M    1_Day_1/3_31_SI_Initilizer_list/31_SI_Initilizer_list.xcodeproj/project.xcworkspace/xcuserdata/malsneha.xcuserdatad/UserInterfaceState.xcuserstate
+ M    ConstConstExpr/17_IfConstExpr
+ M    ConstConstExpr/17_nullptrVS_NULL
+
+ git checkout -b sathya/initilizerToWork
+ Switched to a new branch 'sathya/initilizerToWork'
+
+ 
+ */
+
 #include <iostream>
 #include<vector>
 using namespace std ;
