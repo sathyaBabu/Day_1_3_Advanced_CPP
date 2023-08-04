@@ -8,18 +8,18 @@
 
 #include <iostream>
 #include <functional>
-
-template <typename F>
-concept Function = requires(F f) {
-    typename std::invoke_result_t<F>;
-};
-
-template <Function F1, Function F2>
-auto operator>>(F1 f1, F2 f2) {
-    return [f1, f2](auto input) {
-        return f2(f1(input));
-    };
-}
+//
+//template <typename F>
+//concept Function = requires(F f) {
+//    typename std::invoke_result_t< F >;
+//};
+//
+//template <Function F1, Function F2>
+//auto operator >>  (F1 f1, F2 f2) {
+//    return [f1, f2](auto input) {
+//        return f2(f1(input));
+//    };
+//}
 
 int addOne(int x) {
     return x + 1;
@@ -45,6 +45,13 @@ int main() {
     int input = 10;
     int result = composed(input);
     std::cout << "Result: " << result << std::endl;
+    
+//    // error
+//    auto addOneAndMultiplyByTwo = addOne >> multiplyByTwo; // >>subtractThree >>divideByFour;
+//
+//        int result2 = addOneAndMultiplyByTwo(5);
+//        std::cout << "Result: " << result2 << std::endl;  // Output: Result: 12
+
 
     return 0;
 }

@@ -86,11 +86,28 @@ auto range(int start, int end) {
     return std::views::iota(start, end);
 
 }
+
 //****************
+
 
 class MyVector{
     
     public :
+    
+    
+    //**************** Assignment
+    
+//    MyVector( MyVector&& rValOther, int dummy=0 ) : size( rValOther.size )
+//    {
+//        
+//        cout << " --> Landed in Move Constructor... " << endl ;
+//        std::swap( elements,rValOther.elements);
+//        std::swap( size,rValOther.size);
+//        
+//    }
+
+
+    //*****************
               // Constructor
         MyVector( int i ) : size( i ) {
             std::cout << " -> Landed in regular constructor ...." << std::endl ;
@@ -455,7 +472,12 @@ int main(int argc, const char * argv[]) {
     }
     
 
+    //************** Assignment
+//    cout << " Assignment  creating rValue object"   << endl ;
+//    MyVector rValueVector = { 3 , 0  } ;  //BY  NAVEENA..
+//    MyVector v56(  rValueVector ) ;   // Move constructor gets called
     //**************
+    
     
     
     // c++ 11 range and map

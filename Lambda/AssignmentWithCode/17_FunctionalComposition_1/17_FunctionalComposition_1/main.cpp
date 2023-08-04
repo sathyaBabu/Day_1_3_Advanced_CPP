@@ -29,19 +29,21 @@ void handleEventC(const std::string& value) {
 // Function to compose event handlers
 template <typename... EventHandlers>
 auto composeEventHandlers(EventHandlers... handlers) {
+    std::cout << " creating handlers here...!! "<< " ";
     return [=](auto&&... args) {
-        (handlers(std::forward<decltype(args)>(args)), ...);
+        (   handlers(  std::forward<decltype(args)> ( args ) ),  ... );
     };
 }
 
 int main() {
     // Create individual event handlers
     // ASSIGNMENT : think about overide
-    auto eventHandlerA = [](int value) { handleEventA(value); };
+    auto eventHandlerA = [](int value) {   handleEventA(value); };
     auto eventHandlerB = [](float value) { handleEventB(value); };
     auto eventHandlerC = [](const std::string& value) { handleEventC(value); };
 
     // Compose event handlers together
+    // receives array of function pointers in composedEventHandler
     auto composedEventHandler = composeEventHandlers(eventHandlerA, eventHandlerB, eventHandlerC);
 
     // Simulate events
@@ -51,7 +53,15 @@ int main() {
 
     // Handle multiple events using the composed event handler
     // returns the lambda fun handle lets pass argument to it now
+    
+    // lets pass arguments to  array of function pointers held by composedEventHandler
     composedEventHandler(eventAValue, eventBValue, eventCValue);
 
     return 0;
 }
+/*
+ Handling event A: 10
+ Handling event B: 3.14
+ Handling event C: Hello
+ Program ended with exit code: 0
+ */

@@ -84,11 +84,11 @@ public:
             } else {
                 //*************
                 try {
-                                int number = std::stoi(token);
-                                expressions.emplace_back(std::make_unique<NumberExpression>(number));
-                            } catch (const std::invalid_argument& e) {
-                                std::cerr << "Invalid input token! / - etc..: " << token << std::endl;
-                            }
+                    int number = std::stoi(token);
+                    expressions.emplace_back(std::make_unique<NumberExpression>(number));
+                    } catch (const std::invalid_argument& e) {
+                        std::cerr << "Invalid input token! / - etc..: " << token << std::endl;
+                    }
                 //*************
             }
         }

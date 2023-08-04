@@ -17,6 +17,7 @@
  */
 #include <functional>
 #include <vector>
+using namespace std;
 
 // reffer line 113  17_Concept_Good
 
@@ -82,20 +83,36 @@ private:
     }
 
 private:
-    T mValue;
-    std::vector<std::function<void(const T&)>> mObservers;
+    T mValue;  // void ( *fnptr)(const T& )
+    std::vector<  std::function< void( const T& ) > > mObservers;
 };
 #include <iostream>
 
+void fun(){
+    cout << "Called a fun " << endl ;
+    
+}
+
+
+//std::function<void()>
+
+//(*)();
+
+void ( *fnptr)() = fun;
+
+
 int main()
 {
-    LiveData<int> data{42}; // data : T type is copy-constructible.
+    
+    fnptr();
+    
+    LiveData< int > data{42}; // data : T type is copy-constructible.
 
     data.observe(  [](const auto& value) {
         std::cout << "Observer 1: " << value << std::endl;
     });
 
-    data.observe([](const auto& value) {
+    data.observe(  [](const auto& value) {
         std::cout << "Observer 2: " << value << std::endl;
     });
 
