@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		301A6E782A7D393A00C30B82 /* gitAppVariousStages */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gitAppVariousStages; sourceTree = BUILT_PRODUCTS_DIR; };
 		301A6E7B2A7D393A00C30B82 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		301A6E822A7D4AE200C30B82 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				301A6E7B2A7D393A00C30B82 /* main.cpp */,
+				301A6E822A7D4AE200C30B82 /* ReadMe.md */,
 			);
 			path = gitAppVariousStages;
 			sourceTree = "<group>";
